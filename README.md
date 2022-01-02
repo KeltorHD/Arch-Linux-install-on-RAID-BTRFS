@@ -95,9 +95,9 @@ echo '127.0.1.1	blackbox.local	blackbox' >> /etc/hosts
 
 ```
 vi /etc/mkinitcpio.conf
-  # edit line 'MODULES=(btrfs)'
-  # edit line 'BINARIES=(/sbin/mdmon)'
-  # edit line 'HOOKS=(... mdadm_udev …)'
+  # Update line 'MODULES=(btrfs)'
+  # Update line 'BINARIES=(/sbin/mdmon)'
+  # Update line 'HOOKS=(mdadm_udev)'
 
 mkinitcpio -p linux
 ```
