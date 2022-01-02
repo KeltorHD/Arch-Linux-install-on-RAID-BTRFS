@@ -112,8 +112,8 @@ grub-install --boot-directory=/boot --bootloader-id=ArchLinux_1 --target=x86_64-
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+## Install networking (bridge for VMs)
 ```
-## Install networking
 systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
