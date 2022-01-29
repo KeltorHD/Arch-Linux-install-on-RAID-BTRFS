@@ -23,9 +23,9 @@ mdadm --create /dev/md1 --level=1 --raid-disks=2 /dev/nvme[01]n1p3
 ```
 mkfs.fat -F32 /dev/nvme0n1p1
 mkfs.fat -F32 /dev/nvme1n1p1
-mkswap /dev/md0p1
-swapon /dev/md0p1
-mkfs.btrfs /dev/md1p1
+mkswap /dev/md0
+swapon /dev/md0
+mkfs.btrfs /dev/md1
 ```
 
 ## Install Arch Linux
@@ -34,7 +34,7 @@ timedatectl set-ntp true
 ```
 
 ```
-mount /dev/md1p1 /mnt
+mount /dev/md1 /mnt
 btrfs subvolume create /mnt/@
 brtfs subvolume create /mnt/@boot
 btrfs subvolume create /mnt/@root
@@ -47,14 +47,14 @@ umount /mnt
 ```
 
 ```
-mount -o subvol=@ /dev/md1p1 /mnt
+mount -o subvol=@ /dev/md1 /mnt
 mkdir /mnt/{boot,root,var,tmp,home,opt}
-mount -o subvol=@root /dev/md1p1 /mnt/root
-mount -o subvol=@var /dev/md1p1 /mnt/var
-mount -o subvol=@tmp /dev/md1p1 /mnt/tmp
-mount -o subvol=@home /dev/md1p1 /mnt/home
-mount -o subvol=@opt /dev/md1p1 /mnt/opt
-mount -o subvol=@boot /dev/md1p1 /mnt/boot
+mount -o subvol=@root /dev/md1 /mnt/root
+mount -o subvol=@var /dev/md1 /mnt/var
+mount -o subvol=@tmp /dev/md1 /mnt/tmp
+mount -o subvol=@home /dev/md1 /mnt/home
+mount -o subvol=@opt /dev/md1 /mnt/opt
+mount -o subvol=@boot /dev/md1 /mnt/boot
 mkdir -p /mnt/boot/grub2/x86_64-efi__nvme{01}n1p1
 mount /dev/nvme0n1p1 /mnt/boot/grub2/x86_64-efi__nvme0n1p1
 mount /dev/nvme1n1p1 /mnt/boot/grub2/x86_64-efi__nvme1n1p1
