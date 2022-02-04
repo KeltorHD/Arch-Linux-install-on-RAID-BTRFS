@@ -37,12 +37,52 @@ cd /store/arch_install
 ./06_pacstrap.sh
 ```
 
+### Create fstab and mdadm config, remove resolv.conf
+```
+./07_pre_chroot.sh
+```
+
+### Chroot into the system filesystem
+```
+cd
+umount /store
+arch-chroot /mnt
+mount /dev/sdb1 /mnt
+cd /mnt/arch_install
+```
+
+### Setup timezone, language, ntworking, create ramdrive, update suders config
+```
+./10_pot_chroot.sh
+```
+
+### Install grub
+```
+./11_install_grub.sh
+```
+
+### Setup snapper
+```
+./12_setup_snapper.sh
+```
+
+### Setup root password and reboot
+```
+passwd
+exit
+reboot
+```
+
+### Logn into freshly installed system and make the snapshot
+```
+snapper -c rot create --description 'Initial install, CLI only'
+```
 
 
 
 
 
-# Old procedure
+# Old procedure - deprecated
 
 ## Prepare drives
 ```
