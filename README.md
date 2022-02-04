@@ -64,7 +64,7 @@ reboot
 
 ### Logn into freshly installed system and make the snapshot
 ```
-snapper -c root create --description 'Initial install, CLI only'
+snapper -c root create --description 'Initial install, no users, CLI only'
 ```
 
 
