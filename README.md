@@ -42,7 +42,7 @@ cd /mnt/arch_install
 
 ### Setup timezone, language, ntworking, create ramdrive, update suders config
 ```
-./10_pot_chroot.sh
+./10_post_chroot.sh
 ```
 
 ### Install grub
