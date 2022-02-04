@@ -75,7 +75,7 @@ reboot
 
 ### Logn into freshly installed system and make the snapshot
 ```
-snapper -c rot create --description 'Initial install, CLI only'
+snapper -c root create --description 'Initial install, CLI only'
 ```
 
 
