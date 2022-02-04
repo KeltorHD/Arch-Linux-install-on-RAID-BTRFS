@@ -7,32 +7,32 @@ mount /dev/sdb1 /store
 cd /store/arch_install
 ```
 
-## Create partitions on both drives to be used for boot, swap (raid) and system (raid)
+### Create partitions on both drives to be used for boot, swap (raid) and system (raid)
 ```
 ./01_create_partitions.sh
 ```
 
-## Create raid for swap and system
+### Create raid for swap and system
 ```
 ./02_create_raid.sh
 ```
 
-## Create boot and system filesystems
+### Create boot and system filesystems
 ```
 ./03_create_filesystems.sh
 ```
 
-## Configure BTRFS
+### Configure BTRFS
 ```
 ./04_configure_btrfs.sh
 ```
 
-## Mount BTRFS and enable swap
+### Mount BTRFS and enable swap
 ```
 ./05_mount_btrfs.sh
 ```
 
-## Download system files
+### Download system files
 ```
 ./06_pacstrap.sh
 ```
