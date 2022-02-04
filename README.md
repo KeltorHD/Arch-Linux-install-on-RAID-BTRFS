@@ -31,7 +31,7 @@ cd /store/arch_install
 ./07_pre_chroot.sh
 ```
 
-### Chroot into the system filesystem
+### Chroot into the new filesystem
 ```
 cd
 umount /store
