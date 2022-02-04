@@ -1,5 +1,49 @@
 # Installation of Arch Linux on RAID with the BTRFS filesystem
 
+## Mount USB drive containing instalation scripts in the 'arch_install' directory 
+```
+mkdir /store
+mount /dev/sdb1 /store
+cd /store/arch_install
+```
+
+## Create partitions on both drives to be used for boot, swap (raid) and system (raid)
+```
+./01_create_partitions.sh
+```
+
+## Create raid for swap and system
+```
+./02_create_raid.sh
+```
+
+## Create boot and system filesystems
+```
+./03_create_filesystems.sh
+```
+
+## Configure BTRFS
+```
+./04_configure_btrfs.sh
+```
+
+## Mount BTRFS and enable swap
+```
+./05_mount_btrfs.sh
+```
+
+## Download system files
+```
+./06_pacstrap.sh
+```
+
+
+
+
+
+
+# Old procedure
+
 ## Prepare drives
 ```
 dd if=/dev/zero of=/dev/nvme0n1 bs=512 count=1
