@@ -260,7 +260,7 @@ reboot
 ```
 pacman -S nvidia
 echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf
-mkdir -p /etc/pacman/hooks
+mkdir -p /etc/pacman.d/hooks
 ```
 
 ```
