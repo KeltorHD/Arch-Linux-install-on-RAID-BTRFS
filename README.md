@@ -69,6 +69,14 @@ pacman -Syu
 snapper -c root create --description 'Initial install, no users, CLI only'
 ```
 
+### Install gnome
+```
+pacman -Syu
+pacman -S xorg xorg-server gnome ttf-lberation firefox gnome-tweaks
+systemctl enable gdm.service
+reboot
+```
+
 
 
 
