@@ -64,6 +64,8 @@ reboot
 
 ### Logn into freshly installed system and make the snapshot
 ```
+pacman -Sy archlinux-keyring
+pacman -Syu
 snapper -c root create --description 'Initial install, no users, CLI only'
 ```
 
