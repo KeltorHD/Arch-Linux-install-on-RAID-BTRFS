@@ -1,6 +1,6 @@
 # Installation of Arch Linux on RAID with the BTRFS filesystem
 
-## Mount USB drive containing instalation scripts in the 'arch_install' directory 
+### Mount USB drive containing instalation scripts in the 'arch_install' directory 
 ```
 mkdir /store
 mount /dev/sdb1 /store
