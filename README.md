@@ -139,3 +139,11 @@ mkinitcpio -p linux
 
 snapper -c root create —description 'Initial install, users, gui, nvidia'
 ```
+
+# Rollback to snaphot
+
+```
+snapper list
+snapper rollback <image number>
+reboot
+```
