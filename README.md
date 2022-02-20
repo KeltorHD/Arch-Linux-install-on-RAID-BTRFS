@@ -40,7 +40,7 @@ mount /dev/sdb1 /mnt
 cd /mnt/arch_install
 ```
 
-### Setup timezone, language, ntworking, create ramdrive, update suders config
+### Setup timezone, language, ntworking, create ramdrive, update sudoers config
 ```
 ./10_post_chroot.sh
 ```
