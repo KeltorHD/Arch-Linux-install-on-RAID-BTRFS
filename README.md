@@ -76,8 +76,9 @@ snapper -c root create --description 'Initial install, no users, CLI only'
 ```
 useradd -mG wheel herman
 passwd herman
-visudo
-  # Uncomment line '# %wheel ALL=(ALL) ALL'
+
+snapper -c root create —description 'Initial install, users'
+
 ```
 
 ## Install gnome
@@ -85,6 +86,9 @@ visudo
 pacman -Syu
 pacman -S xorg xorg-server gnome ttf-lberation firefox gnome-tweaks
 systemctl enable gdm.service
+
+snapper -c root create —description 'Initial install, users, gui'
+
 reboot
 ```
 
@@ -133,5 +137,5 @@ vi /etc/mkinitcpio.conf
 
 mkinitcpio -p linux
 
-snapper -c root create —description 'initial installation + gui'
+snapper -c root create —description 'Initial install, users, gui, nvidia'
 ```
