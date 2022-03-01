@@ -8,7 +8,6 @@ btrfs subvolume create /mnt/@/.snapshots
 mkdir /mnt/@/.snapshots/1
 btrfs subvolume create /mnt/@/.snapshots/1/snapshot
 
-#btrfs subvolume create /mnt/@/boot
 btrfs subvolume create /mnt/@/opt
 btrfs subvolume create /mnt/@/root
 btrfs subvolume create /mnt/@/srv
@@ -28,7 +27,6 @@ umount /mnt
 mount /dev/md3 /mnt
 
 mkdir /mnt/.snapshots
-#mkdir /mnt/boot
 mkdir /mnt/opt
 mkdir /mnt/root
 mkdir /mnt/srv
@@ -37,9 +35,7 @@ mkdir -p /mnt/usr/local
 mkdir /mnt/var
 mkdir /mnt/home
 
-#mount -o subvol=@/boot /dev/md3 /mnt/boot
 mkdir -p /mnt/boot/grub2/x86_64-efi__nvme0n1p1
 mkdir -p /mnt/boot/grub2/x86_64-efi__nvme1n1p1
-#umount /mnt/boot
 
 umount /mnt
