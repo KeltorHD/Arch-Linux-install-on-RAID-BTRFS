@@ -50,25 +50,21 @@ cd /mnt/arch_install
 ./11_install_grub.sh
 ```
 
-### Setup snapper
+### Setup root password
+```
+passwd
+```
+
+### Setup snapper and make initial snapshot
 ```
 ./12_setup_snapper.sh
 ```
 
-### Setup root password and reboot
+### Exit chroot environment and reboot
 ```
-passwd
 exit
 reboot
 ```
-
-### Logn into freshly installed system and make the snapshot
-```
-pacman -Sy archlinux-keyring
-pacman -Syu
-snapper -c root create --description 'Initial install, no users, CLI only'
-```
-
 
 # Optional steps
 
