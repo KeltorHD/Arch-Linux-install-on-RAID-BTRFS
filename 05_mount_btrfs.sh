@@ -5,7 +5,6 @@ set -Euo pipefail
 mount /dev/md3 /mnt
 
 mount -o subvol=@/.snapshots /dev/md3 /mnt/.snapshots
-#mount -o subvol=@/boot /dev/md3 /mnt/boot
 mount /dev/nvme0n1p1 /mnt/boot/grub2/x86_64-efi__nvme0n1p1
 mount /dev/nvme1n1p1 /mnt/boot/grub2/x86_64-efi__nvme1n1p1
 mount -o subvol=@/opt /dev/md3 /mnt/opt
@@ -17,4 +16,6 @@ mount -o subvol=@/var /dev/md3 /mnt/var
 mount -o subvol=@/home /dev/md3 /mnt/home
 
 swapon /dev/md2
+
+chattr +C /mnt/var
 
