@@ -1,5 +1,7 @@
 # Installation of Arch Linux on RAID with the BTRFS filesystem
 
+## Base system installation
+
 ### Mount USB drive containing instalation scripts in the 'arch_install' directory 
 Assuming here that /dev/sda is USB stick containing arch linux installation and /dev/sdb contains our configuration scripts
 ```
@@ -66,9 +68,9 @@ exit
 reboot
 ```
 
-# Optional steps
+## Optional steps
 
-## Add user
+### Add user
 ```
 useradd -mG wheel herman
 passwd herman
@@ -77,7 +79,7 @@ snapper -c root create —description 'Initial install, users'
 
 ```
 
-## Install Gnome
+### Install Gnome
 ```
 pacman -Syu
 pacman -S xorg xorg-server gnome gnome-tweaks ttf-liberation firefox
@@ -88,7 +90,7 @@ snapper -c root create —description 'Initial install, users, gui'
 reboot
 ```
 
-## Install KDE Plasma
+### Install KDE Plasma
 ```
 pacman -Syu
 pacman -S xorg xorg-server plasma kde-applications ttf-liberation firefox
@@ -99,7 +101,7 @@ snapper -c root create —description 'Initial install, users, gui'
 reboot
 ```
 
-## Install nvidia drives (from herman user in gnome)
+### Install nvidia drives (from herman user in gnome)
 ```
 pacman -S nvidia
 echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf
@@ -147,7 +149,7 @@ mkinitcpio -p linux
 snapper -c root create —description 'Initial install, users, gui, nvidia'
 ```
 
-# Rollback to given snaphot
+### Rollback to given snaphot
 
 ```
 snapper list
