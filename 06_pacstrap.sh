@@ -2,7 +2,12 @@
 
 set -Euo pipefail
 
-pacstrap /mnt base linux linux-firmware
-pacstrap /mnt vim grub grub-btrfs efibootmgr mdadm amd-ucode btrfs-progs sudo os-prober snapper snap-pac reflector openssh nftables
-pacstrap /mnt git man-db man-pages texinfo exfat-utils base-devel linux-headers dialog os-prober mtools dosfstools bridge-utils archlinux-keyring
+pacstrap /mnt base linux linux-firmware grub grub-btrfs amd-ucode
+pacstrap /mnt archlinux-keyring reflector dialog os-prober sudo vim
+pacstrap /mnt efibootmgr mdadm btrfs-progs snapper snap-pac
+pacstrap /mnt bridge-utils nftables firewalld openssh
+pacstrap /mnt man-db man-pages texinfo
+pacstrap /mnt git base-devel linux-headers 
+pacstrap /mnt mtools dosfstools exfat-utils
+pacstrap /mnt mc htop atop sysstat mpstat strace
 
