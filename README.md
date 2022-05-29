@@ -82,7 +82,7 @@ snapper -c root create —description 'Initial install, users'
 ### Install Gnome
 ```
 pacman -Syu
-pacman -S xorg xorg-server gnome gnome-tweaks ttf-liberation firefox
+pacman -S xorg xorg-server gnome gnome-tweaks ttf-liberation ttf-fira-code firefox
 systemctl enable gdm.service
 
 snapper -c root create —description 'Initial install, users, gui'
@@ -93,7 +93,7 @@ reboot
 ### Install KDE Plasma
 ```
 pacman -Syu
-pacman -S xorg xorg-server plasma kde-applications ttf-liberation firefox
+pacman -S xorg xorg-server plasma kde-applications ttf-liberation ttf-fira-code firefox
 systemctl enable sddm.service
 
 snapper -c root create —description 'Initial install, users, gui'
