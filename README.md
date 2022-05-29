@@ -57,9 +57,14 @@ cd /mnt/arch_install
 passwd
 ```
 
+### Instal KDE Plasma
+```
+./12_install_gui.sh
+```
+
 ### Setup snapper and make initial snapshot
 ```
-./12_setup_snapper.sh
+./13_setup_snapper.sh
 ```
 
 ### Exit chroot environment and reboot
@@ -77,28 +82,6 @@ passwd herman
 
 snapper -c root create —description 'Initial install, users'
 
-```
-
-### Install Gnome
-```
-pacman -Syu
-pacman -S xorg xorg-server gnome gnome-tweaks ttf-liberation ttf-fira-code firefox
-systemctl enable gdm.service
-
-snapper -c root create —description 'Initial install, users, gui'
-
-reboot
-```
-
-### Install KDE Plasma
-```
-pacman -Syu
-pacman -S xorg xorg-server plasma kde-applications ttf-liberation ttf-fira-code firefox
-systemctl enable sddm.service
-
-snapper -c root create —description 'Initial install, users, gui'
-
-reboot
 ```
 
 ### Install nvidia drives (from herman user in gnome)
