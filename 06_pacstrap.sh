@@ -10,7 +10,3 @@ pacstrap /mnt man-db man-pages texinfo
 pacstrap /mnt git base-devel linux-headers 
 pacstrap /mnt mtools dosfstools exfat-utils
 pacstrap /mnt mc htop atop sysstat mpstat strace
-pacstrap /mnt flatpak
-pacstrap /mnt xorg xorg-server plasma kde-applications firefox
-pacstrap /mnt ttf-liberation ttf-fira-code
-
