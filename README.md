@@ -84,7 +84,7 @@ snapper -c root create —description 'Initial install, users'
 
 ```
 
-### Install nvidia drives (from herman user in gnome)
+### Install nvidia drives (from local user in gnome)
 ```
 pacman -S nvidia
 echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf
