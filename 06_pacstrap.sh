@@ -9,4 +9,4 @@ pacstrap /mnt bridge-utils nftables firewalld openssh
 pacstrap /mnt man-db man-pages texinfo
 pacstrap /mnt git base-devel linux-headers 
 pacstrap /mnt mtools dosfstools exfat-utils
-pacstrap /mnt mc htop atop sysstat mpstat strace
+pacstrap /mnt mc htop atop sysstat mpstat strace iotop perf
