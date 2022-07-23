@@ -3,7 +3,7 @@
 set -Euo pipefail
 
 pacstrap /mnt base linux linux-firmware grub grub-btrfs amd-ucode intel-ucode
-pacstrap /mnt archlinux-keyring reflector dialog os-prober sudo vim tmux bash-completion
+pacstrap /mnt archlinux-keyring reflector dialog os-prober sudo vim tmux bash-completion wget
 pacstrap /mnt efibootmgr mdadm btrfs-progs snapper snap-pac
 pacstrap /mnt bridge-utils nftables firewalld openssh
 pacstrap /mnt man-db man-pages texinfo
