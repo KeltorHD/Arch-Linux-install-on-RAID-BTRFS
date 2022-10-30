@@ -2,6 +2,8 @@
 
 set -Euo pipefail
 
+pacman -S archlinux-keyring
+
 pacstrap /mnt base linux linux-firmware grub grub-btrfs amd-ucode intel-ucode
 pacstrap /mnt archlinux-keyring reflector dialog os-prober sudo vim tmux bash-completion wget
 pacstrap /mnt efibootmgr mdadm btrfs-progs snapper snap-pac
