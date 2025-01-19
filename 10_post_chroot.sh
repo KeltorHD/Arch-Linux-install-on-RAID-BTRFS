@@ -16,6 +16,7 @@ systemctl enable systemd-networkd
 systemctl enable systemd-resolved
 systemctl enable sshd
 systemctl enable nftables
+systemctl ename NetworkManager
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 sed -i 's/MODULES=()/MODULES=(btrfs)/g' /etc/mkinitcpio.conf
